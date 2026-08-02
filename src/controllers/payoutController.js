@@ -1,5 +1,6 @@
 const Payout = require("../models/Payout");
 const User = require("../models/User");
+const Community = require("../models/Community");
 
 const createPayout = async (req, res) => {
 
@@ -19,8 +20,22 @@ const createPayout = async (req, res) => {
         });
 
         if (recipients.length === 0) {
-                return res.status(400).json({
+            return res.status(400).json({
                 message: "No eligible members found for this community"
+            });
+        }
+
+        const communityData = await Community.findById(community);
+
+        if (!communityData) {
+            return res.status(404).json({
+                message: "Community not found"
+            });
+        }
+
+        if (communityData.poolBalance < amount) {
+            return res.status(400).json({
+                message: "Insufficient funds in community pool"
             });
         }
 
@@ -32,11 +47,13 @@ const createPayout = async (req, res) => {
             createdBy: req.user.id
         });
 
-        
+        communityData.poolBalance -= amount;
+        await communityData.save();
 
         res.status(201).json({
             message: "Payout created successfully",
-            payout
+            payout,
+            remainingPoolBalance: communityData.poolBalance
         });
 
     } catch (error) {
