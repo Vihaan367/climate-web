@@ -10,7 +10,6 @@ const simulateClimateEvent = async (req, res) => {
             community
         } = req.body;
 
-        // Check if the rainfall crosses the threshold
         const threshold = 250;
         const triggered = rainfall >= threshold;
 
