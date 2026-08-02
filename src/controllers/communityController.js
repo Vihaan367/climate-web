@@ -38,4 +38,4 @@ const createCommunity = async (req, res) => {
 
 module.exports = {
     createCommunity
-};
+    };
