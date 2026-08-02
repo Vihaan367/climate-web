@@ -3,6 +3,8 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const communityRoutes = require("./routes/communityRoutes");
 const climateEventRoutes = require("./routes/climateEventRoutes");
+const fundRoutes = require("./routes/fundRoutes");
+
 
 const app = express();
 
