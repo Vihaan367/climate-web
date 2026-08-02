@@ -18,7 +18,8 @@ const register = async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const user = await User.create({
+        if(!name || !email || !password){
+            const user = await User.create({
 
             name,
 
@@ -31,6 +32,7 @@ const register = async (req, res) => {
             community
 
         });
+}
 
         const userResponse = {
     id: user._id,
@@ -80,7 +82,17 @@ const login = async (req, res) => {
             });
         }
 
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        const token = jwt.sign(
+    {
+        id: user._id,
+        role: user.role,
+        community: user.community
+    },
+    process.env.JWT_SECRET,
+    {
+        expiresIn: "1h"
+    }
+);
 
         
             const userResponse = {
