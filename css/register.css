@@ -1,0 +1,195 @@
+register.css
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:serif, sans-serif;
+}
+
+body{
+
+    background:#F8F4E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 0;
+
+    width: 50%;
+}
+
+.register-box{
+
+    min-width:550px;
+
+    min-height:650px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.logo{
+
+    width:90px;
+
+    margin-top:20px;
+}
+
+h1{
+
+    color:#1F355D;
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+}
+
+.registerText{
+
+    color:rgba(0, 48, 73, 1);
+
+    font-size:1.5rem;
+
+    margin-bottom:20px;
+}
+
+#registerForm{
+
+    margin-top:45px;
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:30px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:rgba(252, 191, 73, 1);
+
+    color:#000;
+
+    font-size:15px;
+}
+
+select{
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+}
+
+input:focus,
+
+select:focus{
+
+    outline:2px solid black;
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:rgba(0, 48, 73, 1);
+
+    color:rgba(234, 226, 183, 1);
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#16294A;
+}
+
+.login{
+
+    margin-top:35px;
+
+    color:rgba(0, 48, 73, 1);
+
+    font-size:14px;
+}
+
+.login a{
+
+    color:rgba(0, 48, 73, 1);
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.login a:hover{
+
+    text-decoration:none;
+}
+
+::placeholder{
+
+    color:#333;
+}
+
+@media(max-width:650px){
+
+    .register-box{
+
+        min-width:90%;
+
+        padding:30px;
+    }
+
+    h1{
+
+        font-size:2rem;
+    }
+
+    .registerText{
+
+        font-size:1.4rem;
+    }
+}

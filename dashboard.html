@@ -1,0 +1,346 @@
+dashboard.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CIARA | Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="brand">
+
+
+<h2>CIARA</h2>
+
+</div>
+
+
+<div class="nav-links">
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="admin.html">
+Admin
+</a>
+
+<a href="login.html">
+Logout
+</a>
+
+</div>
+
+</nav>
+
+
+
+
+
+<div class="container">
+
+
+<div class="welcome">
+
+<h1 id="welcomeUser">
+Welcome Back 👋
+</h1>
+
+<p>
+Yamuna Community Protection Zone
+</p>
+
+</div>
+
+
+
+
+
+<div class="risk-banner">
+
+
+<div>
+
+<h3>
+Current Climate Risk
+</h3>
+
+<h1>
+HIGH 🔴
+</h1>
+
+
+</div>
+
+
+
+<div class="risk-info">
+
+<p>
+Rainfall
+</p>
+
+<h2>
+320 mm
+</h2>
+
+</div>
+
+
+
+<div class="risk-info">
+
+<p>
+River Level
+</p>
+
+<h2>
+8.2 m
+</h2>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+Protection Status
+</h3>
+
+<h1 class="green">
+ACTIVE ✓
+</h1>
+
+<p>
+Your community is covered under CIARA protection.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Monthly Contribution
+</h3>
+
+<h1>
+₹100
+</h1>
+
+<p>
+Community risk pool contribution.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Members Protected
+</h3>
+
+<h1>
+250
+</h1>
+
+<p>
+People covered in your region.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<section class="risk-profile">
+
+<h2>
+Community Risk Profile
+</h2>
+
+
+<div class="profile-card">
+
+
+<div class="profile-item">
+
+<h3>
+Location
+</h3>
+
+<p>
+Yamuna Flood Zone, Delhi
+</p>
+
+</div>
+
+
+
+<div class="profile-item">
+
+<h3>
+Primary Risk
+</h3>
+
+<p class="red">
+Flooding 🔴
+</p>
+
+</div>
+
+
+
+<div class="profile-item">
+
+<h3>
+Coverage Level
+</h3>
+
+<p class="green">
+Protected ✓
+</p>
+
+</div>
+
+
+
+<div class="profile-item">
+
+<h3>
+Response Time
+</h3>
+
+<p>
+Instant Trigger
+</p>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+<h2 class="section-title">
+Recent Emergency Assistance
+</h2>
+
+
+
+
+<div class="payout">
+
+
+<div>
+
+<h3>
+Flood Relief Assistance
+</h3>
+
+<p>
+Triggered by extreme rainfall event
+</p>
+
+</div>
+
+
+<div>
+
+<h2>
+₹5000
+</h2>
+
+<span>
+COMPLETED ✓
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="message">
+
+
+<h2>
+🛡 CIARA Protection System
+</h2>
+
+
+<p>
+Climate conditions are continuously monitored.
+If disaster thresholds are crossed, emergency
+financial assistance is automatically activated.
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+<script>
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if(user){
+
+document.getElementById("welcomeUser").innerHTML =
+`Welcome Back, ${user.name} 👋`;
+
+}
+
+</script>
+</body>
+
+</html>

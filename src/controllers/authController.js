@@ -82,7 +82,6 @@ const login = async (req, res) => {
             });
         }
 
-<<<<<<< HEAD
         const token = jwt.sign(
     {
         id: user._id,
@@ -95,9 +94,6 @@ const login = async (req, res) => {
     }
 );
 
-=======
-        const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: "7d" });
->>>>>>> 144947a (connection)
         
             const userResponse = {
                 id: user._id,

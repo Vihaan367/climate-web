@@ -13,18 +13,7 @@ const simulateClimateEvent = async (req, res) => {
 
         const { type, rainfall, riverLevel, community } = req.body;
 
-<<<<<<< HEAD
         const threshold = 250;
-=======
-        const communityData = await Community.findById(community);
-        if (!communityData) {
-            return res.status(404).json({
-                message: "Community not found"
-            });
-        }
-
-        const threshold = communityData.threshold;
->>>>>>> 144947a (connection)
         const triggered = rainfall >= threshold;
 
         const event = await ClimateEvent.create({
